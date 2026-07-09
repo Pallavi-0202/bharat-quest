@@ -20,7 +20,7 @@ const [startQuiz, setStartQuiz] = useState(false);
   useEffect(() => {
 
     axios
-      .get("http://localhost:5000/api/questions")
+    .get("https://bharat-quest-backend.onrender.com/api/questions")
       .then((response) => {
         setQuestions(response.data);
       })
@@ -28,7 +28,9 @@ const [startQuiz, setStartQuiz] = useState(false);
         console.log(error);
       });
 
+
   }, []);
+  
 const current = questions[currentQuestion];
 const handleNext = () => {
 
